@@ -20,7 +20,8 @@ namespace ShowMenu {
 		cout << "2. Просмотреть мои объявления" << endl;
 		cout << "3. Просмотреть все объявления" << endl;
 		cout << "4. Удалить этот аккаунт" << endl;
-		cout << "5. Выход из программы" << endl;
+		cout << "5. Изменить пароль" << endl;
+		cout << "6. Выход из программы" << endl;
 	}
 
 	void ShowBuyerMenu() {
@@ -28,7 +29,8 @@ namespace ShowMenu {
 		cout << "2. Поиск квартиры по фильтрам" << endl;
 		cout << "3. Просмотр списка избранного жилья" << endl;
 		cout << "4. Удалить этот аккаунт" << endl;
-		cout << "5. Выход из программы" << endl;
+		cout << "5. Изменить пароль" << endl;
+		cout << "6. Выход из программы" << endl;
 	}
 
 	void ShowFilterMenu() {
@@ -181,6 +183,9 @@ namespace Working {
 				buyer.DeleteAccount(FileManager::GetBuyerPath(), FileManager::GetBuyerlistPath());
 			}
 			case 5: {
+				buyer.ChangePassword(FileManager::GetBuyerPath());	
+			}
+			case 6: {
 				return;
 			}
 			default: {break; }
@@ -209,6 +214,10 @@ namespace Working {
 				realtor.DeleteAccount(FileManager::GetRealtorPath(), FileManager::GetRealtorlistPath());
 			}
 			case 5: {
+				realtor.ChangePassword(FileManager::GetRealtorPath());
+				
+			}
+			case 6: {
 				return;
 			}
 			default: break;

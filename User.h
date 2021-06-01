@@ -33,6 +33,8 @@ public:
 
 	void DeleteAccount(string account_path, string list_path);
 
+	void ChangePassword(string account_path);
+
 	void GetAccount(string fullpath);
 
 	void ShowAdList();

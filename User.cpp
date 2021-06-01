@@ -1,12 +1,6 @@
 #include "User.h"
 
-void User::EncryptPassword(char* password)
-{
-	auto hash_ = hash<string>{}(password);
-	string result;
-	result = to_string(hash_);
-	ConvertStringToMasChar(result, password);
-}
+
 
 User::User()
 {
@@ -42,6 +36,70 @@ void User::DeleteAccount(string account_path, string list_path){
 	cout << "Аккаунт успешно удалён!" << endl;
 	system("pause");
 	system("cls");
+}
+
+void User::EncryptPassword(char* password)
+{
+	auto hash_ = hash<string>{}(password);
+	string result;
+	result = to_string(hash_);
+	ConvertStringToMasChar(result, password);
+}
+
+void User::ChangePassword(string account_path){
+	fstream fs;
+	char new_password[64], old_password[64];
+	fs.open(account_path + login, ios::in | ios::binary);
+	fs.read((char*)&password, sizeof(char) * 64);
+	fs.close();
+	
+	while (true)
+	{ 
+		cout << "Введите старый пароль:";
+		cin.ignore(64, '\n');
+		cin.getline(old_password, 64);
+		EncryptPassword(old_password);
+		if (ConvertMasCharToString(password) != ConvertMasCharToString(old_password))
+		{
+			cout << "Неверный пароль, желаете повторите попытку? \n1. - да \n2. - нет.\n";
+			if (GetInt(1, 2) == 2)
+			{
+				return;
+			}
+			else
+			{
+				cin.clear();
+				cin.ignore(64, '\n');
+				continue;
+			}
+		}
+		else
+		{
+			
+			break;
+		}
+	}
+	while (true)
+	{
+		cout << "Введите новый пароль: ";
+		cin.getline(new_password, 64);
+		system("cls");
+		cout << "Введите пароль ещё раз: ";
+		cin.getline(password, 64);
+		if (ConvertMasCharToString(password) == ConvertMasCharToString(new_password))
+		{
+
+			EncryptPassword(password);
+			break;
+		}
+		else
+		{
+			cout << "Пароли не совпадают. Попробуйте ещё раз." << endl;
+		}
+	}
+	fs.open(account_path + ConvertMasCharToString(login), ios::out | ios::trunc | ios::binary);
+	fs.write((char*)&password, sizeof(char) * 64);
+	fs.close();
 }
 
 void User::GetAccount(string path) {
