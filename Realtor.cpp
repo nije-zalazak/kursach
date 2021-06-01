@@ -125,7 +125,7 @@ void Realtor::DeleteAd(string adname) {
 		remove(FileManager::GetApartPath() + adname);
 	}
 	fs.open(FileManager::GetRealtorlistPath() + login, ios::in | ios::binary);
-	while (fs.eof()) {
+	while (!fs.eof()) {
 		fs >> temp;
 		adlist.push_back(temp);
 	}

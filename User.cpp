@@ -32,6 +32,18 @@ void User::SaveAccount(string path) {
 	fs.close();
 }
 
+void User::DeleteAccount(string account_path, string list_path){
+	if (exists(account_path + login)) {
+		remove(account_path + login);
+	}
+	if (exists(list_path + login)) {
+		remove(list_path + login);
+	}
+	cout << "Аккаунт успешно удалён!" << endl;
+	system("pause");
+	system("cls");
+}
+
 void User::GetAccount(string path) {
 	fstream fs;
 	fs.open(path + login, ios::in | ios::binary);

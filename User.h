@@ -31,6 +31,8 @@ public:
 
 	void SaveAccount(string path);
 
+	void DeleteAccount(string account_path, string list_path);
+
 	void GetAccount(string fullpath);
 
 	void ShowAdList();
@@ -40,15 +42,5 @@ public:
 	void AddToMyList(string adname, string path);
 
 	virtual void ViewAd(string adname) = 0;
-
-	//virtual void ShowMyList() = 0;
-
-	//virtual bool CheckAdList(string adName) = 0;
-
-
-
-	
-
-
 };
 

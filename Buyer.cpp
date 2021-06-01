@@ -44,7 +44,6 @@ void Buyer::ViewAd(string adName) {
 
 		void Buyer::FilterAds() {
 			vector<Aparts> apartments;
-			int adNum;
 			string choice;
 			for (const auto& entry : directory_iterator(FileManager::GetApartPath()))
 			{
