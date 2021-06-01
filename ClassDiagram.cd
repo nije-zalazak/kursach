@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Aparts">
+    <Position X="1.25" Y="2" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAogAAAAJgJEQKIAASIAAAAIAAAAADAAAACAIBA=</HashCode>
+      <FileName>Aparts.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Buyer">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAQAAAAAAAAAAAIAAAQAAAAAAQ=</HashCode>
+      <FileName>Buyer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Realtor">
+    <Position X="7.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAQAAAAAAAEAACEAAAAAIAAgAAAAAAAQ=</HashCode>
+      <FileName>Realtor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="User">
+    <Position X="5.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABAAAAAAAACAABAAEAAAAAgAAAABAIAAAAAkAAFAQ=</HashCode>
+      <FileName>User.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileManager">
+    <Position X="3" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACgAAgAAAAICAASICIAAAAAIAADJAAoAAgAAAAAAAA=</HashCode>
+      <FileName>FileManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
