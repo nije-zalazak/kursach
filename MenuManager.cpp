@@ -5,15 +5,8 @@ namespace ShowMenu {
 
 		cout << "1. Войти как покупатель" << endl;
 		cout << "2. Войти как риэлтор" << endl;
-	/*	cout << "3. Войти как Администратор" << endl;*/
 		cout << "3. Выход из программы" << endl;
 	}
-
-	/*void ShowAdminMenu() {
-		cout << "1. Добавить покупателя" << endl;
-		cout << "2. Добавить риэлтора" << endl;
-		cout << "3. Выход из программы" << endl;
-	}*/
 
 	void ShowRealtorMenu() {
 		cout << "1. Добавить объявление о продаже" << endl;
